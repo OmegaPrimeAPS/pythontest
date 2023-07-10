@@ -1,0 +1,35 @@
+
+
+<html lang="en">
+    <head>
+        <meta charset="UFT-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    
+    </head>
+    <body>
+        {% include 'nav.html' %}
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+              <!-- Tabs Titles -->
+              <a href="{{ url_for('registro') }}" class="inactive underlineHover"> Sign In </a>
+              <a href="#" class="active">Sign Up </a>
+              <!-- Login Form -->
+              <form action="{{ url_for('register') }}" method="POST">
+                <input type="text" id="username_reg" class="fadeIn second" name="username_reg" placeholder="username">
+                <input type="text" id="email_reg" class="fadeIn second" name="email_reg" placeholder="Email">
+                <input type="password" id="password1" class="fadeIn third" name="password1" placeholder="password">
+                <input type="password" id="password2" class="fadeIn third" name="password2" placeholder="confirma password">
+                <input type="submit" id="signup_submit"class="fadeIn fourth" name="signup_submit" value="reg">
+              </form>
+
+              <!-- Remind Password -->
+              <div id="formFooter">
+                <a class="underlineHover" href="#">Forgot Password?</a>
+              </div>
+          
+            </div>
+          </div>
+    </body>    
+</html>

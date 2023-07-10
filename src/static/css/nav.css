@@ -1,0 +1,64 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  nav{
+    background:#000;
+    height:10vh;
+  }
+  nav i{
+    font-size:1.5rem;
+  }
+  nav i, nav a{
+    color:#fff;
+  }
+  nav ul {
+    display:flex;
+  }
+  nav ul .items{
+    display:flex;
+  }
+  nav ul .close{
+    display:none;
+  }
+  nav ul li{
+    padding:.5rem 1rem;
+  }
+  
+  @media (max-width: 768px){
+    nav ul .items{
+      display:none;
+    }
+    nav ul .close{
+      display:block;
+    }
+    nav ul > li{
+      width:100%;
+    }
+    nav ul .items li{
+      text-align:right;
+    }
+    nav ul > li:last-child{
+      text-align:right;
+    }
+    .visible-menu .items{
+      display:block !important;
+      width:100%;
+      position:absolute;
+      top:2rem;
+      background:#000;
+    }
+  }
+  .content > div {
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:solid 1px #000;
+  }
+  h1{
+    font-size:5rem;
+    color:#fff;
+  }

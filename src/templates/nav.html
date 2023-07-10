@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UFT-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/nav.css') }}">
+    </head>
+    <body>   
+        <div class="content">
+            <nav>
+              <ul id="div">
+                <li><a><i class="fas fa-home"></i></a></li>
+                <div class="items">
+                  <li><a href="{{ url_for('index') }}">Productos</a></li>
+                  {% if session.logged_in %}
+    <!-- Si la sesión está iniciada, no mostrar los enlaces -->
+                  {% else %}
+                      <li><a href="{{ url_for('inicio') }}">Iniciar Sesión</a></li>
+                      <li><a href="{{ url_for('register') }}">Registrarse</a></li>
+                  {% endif %}
+                  {% if session.get("logged_in") %}
+                    <li><a href="{{ url_for('form') }}">Agregar Productos</a></li>
+                    <li><a href="{{ url_for('lista_usuarios') }}">Lista de Usuarios</a></li>
+                    <li><a href="{{ url_for('cerrar_session') }}">Cerrar Sesion</a></li>
+                  {% endif %}
+                </div>
+                  <li class="close" id="menu-on"><a><i class="fas fa-bars"></i></a></li>
+              </ul>
+            </nav>
+              
+            </div>
+    </body>    
+</html>
